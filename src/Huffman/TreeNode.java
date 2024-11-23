@@ -1,77 +1,50 @@
 package Huffman;
 
-public class TreeNode
-{
-  private int freq;
-  private char symbol;
-  private TreeNode leftChild;
-  private TreeNode rightChild;
+public class TreeNode {
+    private int freq;
+    private char symbol;
+    private TreeNode leftChild;
+    private TreeNode rightChild;
 
-  public TreeNode(int f, char s)
-  {
-  // Initializes tree node with item and no children.
-    freq = f;
-    symbol = s;
-    leftChild  = null;
-    rightChild = null;
-  }  // end constructor
+    public TreeNode(int freq, char symbol) {
+        this.freq = freq;
+        this.symbol = symbol;
+        this.leftChild = null;
+        this.rightChild = null;
+    }
 
-  public TreeNode(int f, char s,
-                  TreeNode left, TreeNode right)
-                  {
-  // Initializes tree node with item and
-  // the left and right children references.
-	freq = f;
-	symbol = s;
-    leftChild  = left;
-    rightChild = right;
-  }  // end constructor
+    public TreeNode(int freq, char symbol, TreeNode leftChild, TreeNode rightChild) {
+        this.freq = freq;
+        this.symbol = symbol;
+        this.leftChild = leftChild;
+        this.rightChild = rightChild;
+    }
 
-  public int getFreq()
-  {
-  // Returns the item field.
-    return freq;
-  }  // end getItem
+    public int getFreq() {
+        return freq;
+    }
 
-  public void setFreq(int f)
-  {
-  // Sets the item field to the new value newItem.
-	  freq = f;
-  }  // end setItem
-  
-  public char getSymbol()
-  {
-  // Returns the item field.
-    return symbol;
-  }  // end getItem
+    public char getSymbol() {
+        return symbol;
+    }
 
-  public void setSymbol(char s)
-  {
-  // Sets the item field to the new value newItem.
-	  symbol = s;
-  }  // end setItem
+    public TreeNode getLeft() {
+        return leftChild;
+    }
 
-  public TreeNode getLeft()
-  {
-  // Returns the reference to the left child.
-    return leftChild;
-  }  // end getLeft
+    public TreeNode getRight() {
+        return rightChild;
+    }
 
-  public void setLeft(TreeNode left)
-  {
-  // Sets the left child reference to left.
-    leftChild  = left;
-  }  // end setLeft
+    public void setLeft(TreeNode left) {
+        this.leftChild = left;
+    }
 
-  public TreeNode getRight()
-  {
-  // Returns the reference to the right child.
-    return rightChild;
-  }  // end getRight
+    public void setRight(TreeNode right) {
+        this.rightChild = right;
+    }
 
-  public void setRight(TreeNode right)
-  {
-  // Sets the right child reference to right.
-    rightChild  = right;
-  }  // end setRight
-}  // end TreeNode
+    public boolean isLeaf() {
+        return (this.leftChild == null && this.rightChild == null);
+    }
+}
