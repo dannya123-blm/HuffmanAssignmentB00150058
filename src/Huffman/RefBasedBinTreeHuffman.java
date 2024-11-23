@@ -2,10 +2,11 @@ package Huffman;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList; //Algorithms Used
-import java.util.List; //Algorithms Used
+import java.util.ArrayList;
+import java.util.List; 
 import java.util.Scanner;
 
+//using the greedy algorithm
 public class RefBasedBinTreeHuffman {
     private TreeNode root;
     private List<TreeNode> freqTable = new ArrayList<>();
